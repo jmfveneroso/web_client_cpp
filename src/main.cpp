@@ -1,4 +1,6 @@
-#include "web_client.hpp"
+#include "curl_client.hpp"
+#include "chilkat_client.hpp"
+#include "custom_client.hpp"
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
@@ -6,8 +8,9 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  WebClient web_client;
-  HttpResponse response = web_client.Download(argv[1]);
-  std::cout << response.body << std::endl;
+  // Curllient client;
+  // ChilkatClient client;
+  CustomClient client;
+  std::cout << client.Download(argv[1]) << std::endl;
   return 0;
 }
