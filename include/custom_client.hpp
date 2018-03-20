@@ -19,7 +19,7 @@
 #define MAX_REDIRECTS 5
 #define MAX_DATA_SIZE 1000000
 #define TIMEOUT 5000
-// #define VERBOSE
+#define VERBOSE
 
 struct Url {
   bool https; 
